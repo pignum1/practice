@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        //使用的仓库优先级
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.5.RELEASE")
+    }
+}
+
+apply plugin: 'org.springframework.boot'
+
+archivesBaseName = 'entity'
+
+
+ext {
+}
+
+bootRepackage{
+    enabled = false		//添加原因请参考http://docs.spring.io/autorepo/docs/spring-boot/1.4.5.RELEASE/reference/html/build-tool-plugins-gradle-plugin.html#build-tool-plugins-understanding-the-gradle-plugin
+}
+
+build{
+}
+
+dependencies {
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.4.RELEASE'
+}
+
+configurations {
+    // 所有需要忽略的包定义在此
+    //all*.exclude group: 'commons-httpclient'
+    //all*.exclude group: 'commons-beanutils', module: 'commons-beanutils'
+}

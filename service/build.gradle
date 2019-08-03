@@ -1,0 +1,6 @@
+version 'unspecified'
+dependencies{
+    compile project(':entity')
+    compile project(':dao')
+}
+
