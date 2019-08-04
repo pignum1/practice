@@ -41,7 +41,6 @@ public class Swagger2 {
                 .title("Spring Boot中使用Swagger2构建RESTful APIs")
                 .description("Spring Boot相关文章请关注： https://pignum1.github.io/")
                 .termsOfServiceUrl(" https://pignum1.github.io/")
-                .contact("胖虎")
                 .version("1.0")
                 .build();
     }
