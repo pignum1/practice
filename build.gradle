@@ -85,6 +85,10 @@ subprojects {
 //        邮件嵌入静态资源
         // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-velocity
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-velocity', version: '1.4.7.RELEASE'
+//         web界面模板引擎
+        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.1.6.RELEASE'
+
 
 
 
