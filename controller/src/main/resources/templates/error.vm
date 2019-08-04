@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head lang="en" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8" />
+    <title>统一异常处理</title>
+</head>
+<body>
+<h1>Error Handler</h1>
+
+<h3>url: ${url}</h3>
+<h3>message:${exception}</h3>
+</body>
+</html>

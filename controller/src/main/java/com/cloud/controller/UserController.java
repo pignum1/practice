@@ -2,6 +2,7 @@ package com.cloud.controller;
 
 import com.cloud.common.OperateResult;
 import com.cloud.entity.User;
+import com.cloud.exception.MyException;
 import com.cloud.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +40,10 @@ public class UserController {
     @ApiOperation( value = "用户注册申请",notes = "用户注册申请")
     public OperateResult register(User user){
         return OperateResult.operationSuccess( "保存测试接口" );
+    }
+
+    @RequestMapping("/json")
+    public String  json() throws MyException {
+        throw new MyException("发生错误2");
     }
 }
