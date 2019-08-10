@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -21,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping(value="/user")
 public class UserController {
-    @Autowired
+    @Autowired(required = true)
     private UserService userService;
 
     //TODO REMOVE

@@ -1,13 +1,13 @@
 package test;
-import java.util.Date;
 
 import com.cloud.Application;
-import com.cloud.dao.UserDao;
 import com.cloud.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -20,30 +20,33 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PriceTest {
+
+    @Autowired(required = true)
+    private RedisTemplate redisTemplate;
+
     @Autowired
-    private UserDao userDao;
+    private StringRedisTemplate stringRedisTemplate;
+
 
     @Test
     public void testSave(){
+// 保存对象
         User user = new User();
-        user.setUsername("test2");
-        user.setPassword("test2");
-        user.setEmail("test2");
-        user.setPhone("test2");
-        user.setQuestion("test2");
-        user.setAnswer("test2");
-        user.setRole(0);
-        user.setId("test2");
-        user.setCreateTime(new Date());
-        user.setCreateBy(0L);
-        user.setLastModifiedTime(new Date());
-        user.setLastModifiedBy("test2");
-
-
-
-        userDao.save( user );
+        user.setUsername("uhu");
+        user.setPassword("13424");
+        redisTemplate.opsForValue().set(user.getUsername(), user);
+        Object object = redisTemplate.opsForValue().get( "1" );
+        System.out.println(object.toString());
 
     }
 
+    @Test
+    public void testString(){
+        User user = new User();
+        user.setUsername("1");
+        user.setPassword("2");
+        stringRedisTemplate.opsForValue().set( user.getUsername(),user.toString() );
+
+    }
 
 }

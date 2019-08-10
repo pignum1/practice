@@ -1,4 +1,4 @@
-package com.cloud.controller;
+package com.cloud.common;
 
 import com.cloud.exception.ErrorInfo;
 import com.cloud.exception.MyException;

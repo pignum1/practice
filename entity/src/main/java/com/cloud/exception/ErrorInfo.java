@@ -1,5 +1,7 @@
 package com.cloud.exception;
 
+import java.io.Serializable;
+
 /**
  * @author WXY
  * @ClassName ErrorInfo
@@ -7,7 +9,7 @@ package com.cloud.exception;
  * @Date 2019/8/4 20:37
  * @Version 1.0
  **/
-public class ErrorInfo<T> {
+public class ErrorInfo<T> implements Serializable{
     public static final Integer OK = 0;
     public static final Integer ERROR = 100;
 

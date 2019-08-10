@@ -1,5 +1,6 @@
 package com.cloud.entity;
 
+import com.alibaba.fastjson.JSON;
 import com.cloud.common.BaseEntity;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -96,5 +97,10 @@ public class User extends BaseEntity implements Serializable {
 
     public void setRole(Integer role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return JSON.toJSONString( this );
     }
 }
