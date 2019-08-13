@@ -46,9 +46,9 @@ subprojects {
         }
     }
 
-//    ext {
-//        set('springCloudVersion', "Dalston.SR5")
-//    }
+    ext {
+        set('springCloudVersion', "Dalston.SR5")
+    }
 
     dependencies{
 //        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.4.RELEASE'
@@ -70,13 +70,26 @@ subprojects {
         compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.8'
         compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jaxb-annotations', version: '2.9.8'
 
-        compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.2.2'
-        compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.2.2'
         testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.9.RELEASE'
 
 //        swagger 2
         compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
         compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+
+        //redis
+        compile group: 'org.springframework.data', name: 'spring-data-redis', version: '1.7.2.RELEASE'
+        // jedis
+        compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+
+        // fastjson
+        compile group: 'com.alibaba', name: 'fastjson', version: '1.2.58'
+
+
+        // easypoi
+        compile group: 'cn.afterturn', name: 'easypoi-base', version: '4.0.0'
+        compile group: 'cn.afterturn', name: 'easypoi-web', version: '4.0.0'
+        compile group: 'cn.afterturn', name: 'easypoi-annotation', version: '4.0.0'
+
 
     }
 }

@@ -6,9 +6,11 @@ import com.cloud.exception.MyException;
 import com.cloud.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -47,4 +49,24 @@ public class UserController {
     public String  json() throws MyException {
         throw new MyException("发生错误2");
     }
+
+    @Cacheable(value="thisredis", key="'users_'+#id")
+    @PostMapping("/findUser")
+    public User findUser(Integer id) {
+        User user = new User();
+        user.setUsername("hlhdidi");
+        user.setPassword("123");
+        user.setId(id.toString());
+        return user;
+    }
+
+    @CacheEvict(value="thisredis", key="'users_'+#id",condition="#id!=1")
+    @PostMapping("/delUser")
+    public void delUser(Integer id) {
+        // 删除user
+    }
+
+
+
+
 }

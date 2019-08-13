@@ -2,12 +2,17 @@ package com.cloud.entity;
 
 import com.alibaba.fastjson.JSON;
 import com.cloud.common.BaseEntity;
-import org.hibernate.annotations.GenericGenerator;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author WXY
@@ -98,6 +103,24 @@ public class User extends BaseEntity implements Serializable {
     public void setRole(Integer role) {
         this.role = role;
     }
+
+    @Cacheable(value = "thisredis",key="'users_'+#id")
+    public String getUser(int id) {
+        System.out.println( "Method executed.." );
+        if (id == 1) {
+            return "User 1";
+        } else {
+            return "User 2";
+        }
+    }
+
+    @CacheEvict(value="thisredis", key="'users_'+#id",condition="#id!=1")
+    @PostMapping("/delUser")
+    public void delUser(Integer id) {
+        // 删除user
+    }
+
+
 
     @Override
     public String toString() {

@@ -20,14 +20,14 @@ import javax.servlet.http.HttpServletRequest;
 public class GlobalExceptionHandler {
     public static final String DEFAULT_ERROR_VIEW = "error";
 
-//    @ExceptionHandler(value = MyException.class)
-//    public ModelAndView defaultErrorHandler(HttpServletRequest req,MyException e) throws Exception {
-//        ModelAndView mav = new ModelAndView();
-//        mav.addObject("exception", e);
-//        mav.addObject("url", req.getRequestURL());
-//        mav.setViewName(DEFAULT_ERROR_VIEW);
-//        return mav;
-//    }
+    @ExceptionHandler(value = MyException.class)
+    public ModelAndView defaultErrorHandler(HttpServletRequest req,MyException e) throws Exception {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("exception", e);
+        mav.addObject("url", req.getRequestURL());
+        mav.setViewName(DEFAULT_ERROR_VIEW);
+        return mav;
+    }
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
