@@ -62,23 +62,4 @@ public class CacheConfig extends CachingConfigurerSupport {
         factory.setTimeout(0); //设置连接超时时间
         return factory;
     }
-
-
-    @Bean
-    public User user() {
-        return new User();
-    }
-
-
-
-    public static void main(String[] args) {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-        ctx.register( CacheConfig.class );
-        ctx.refresh();
-        User user = ctx.getBean(User.class);
-        System.out.println(user.getUser( 1 ));
-        System.out.println(user.getUser( 1 ));
-        System.out.println(user.getUser( 2 ));
-        ctx.close();
-    }
 }
