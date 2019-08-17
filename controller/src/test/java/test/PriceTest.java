@@ -1,5 +1,6 @@
 package test;
 
+import com.alibaba.fastjson.JSON;
 import com.cloud.Application;
 import com.cloud.entity.User;
 import org.junit.Test;
@@ -17,8 +18,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @Date 2019/6/26 9:49
  * @Version 1.0
  **/
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PriceTest {
 
     @Autowired(required = true)
@@ -48,5 +49,4 @@ public class PriceTest {
         stringRedisTemplate.opsForValue().set( user.getUsername(),user.toString() );
 
     }
-
 }

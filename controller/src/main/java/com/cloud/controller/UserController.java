@@ -1,5 +1,6 @@
 package com.cloud.controller;
 
+import cn.afterturn.easypoi.excel.entity.ImportParams;
 import com.cloud.common.OperateResult;
 import com.cloud.entity.User;
 import com.cloud.exception.MyException;
@@ -10,7 +11,9 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -67,6 +70,17 @@ public class UserController {
     }
 
 
+    @PostMapping("/importTest")
+    public OperateResult importTest(@RequestParam(name = "file")MultipartFile file){
+        try {
+            ImportParams params = new ImportParams();
+            params.setTitleRows( 0 );
+            params.setHeadRows( 1 );
 
-
+            return OperateResult.operationSuccess( "ok" );
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
