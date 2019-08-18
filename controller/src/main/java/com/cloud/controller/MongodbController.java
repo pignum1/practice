@@ -116,11 +116,4 @@ public class MongodbController {
         gridFsTemplate.delete(query);
         return OperateResult.operationSuccess( "删除成功" );
     }
-
-    //5d57c12f4a0336133c2c2dad
-
-    //5d57c12f4a0336133c2c2dac
-
-
-
 }

@@ -8,13 +8,17 @@ buildscript {
         jcenter()
     }
     dependencies {
+        classpath(group: 'org.flywaydb', name: 'flyway-gradle-plugin', version: "4.1.2")
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.5.RELEASE")
     }
 }
 
 apply plugin: 'org.springframework.boot'
+apply plugin: 'org.flywaydb.flyway'
 
 archivesBaseName = 'entity'
+
+
 
 
 ext {
@@ -29,6 +33,22 @@ build{
 
 dependencies {
 //    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.4.RELEASE'
+}
+
+flyway{
+    driver = "${flyway_driver}"
+    url = "$flyway_url"
+    user = "$flyway_user"
+    password = "$flyway_password"
+    //flyway发布版本记录的表名称
+    table = 'flyway_version'
+    locations ='db/migration'
+//    locations = 'db/migrations'
+    baselineOnMigrate=true
+    //
+    //sqlMigrationPrefix = 'V'
+    // 禁止flywayClean，在生产环境中非常重要
+    cleanDisabled = false
 }
 
 configurations {
