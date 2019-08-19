@@ -18,8 +18,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @Date 2019/6/26 9:49
  * @Version 1.0
  **/
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PriceTest {
 
     @Autowired(required = true)
