@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79939c65-a9b0-48a2-b57b-0ede118af700" name="Default" comment="spring boot mongodb 使用gradle 管理实体版本">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/entity/src/main/java/com/cloud/config/DynamicScheduleTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/entity/src/main/java/com/cloud/config/MultiThreadScheduleTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/entity/src/main/java/com/cloud/config/ScheduledTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/entity/src/main/resources/db/migration/V1.0.0_1__BMS_NPM_CREATE.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/controller/controller_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/controller/controller_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/dao/dao_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/dao/dao_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/entity/entity_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/entity/entity_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/service/service_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/service/service_test.iml" />
+    <list default="true" id="79939c65-a9b0-48a2-b57b-0ede118af700" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/entity/src/main/java/com/cloud/entity/FileInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/src/test/java/test/PriceTest.java" afterPath="$PROJECT_DIR$/controller/src/test/java/test/PriceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entity/src/main/java/com/cloud/core/BaseDaoImpl.java" afterPath="$PROJECT_DIR$/entity/src/main/java/com/cloud/core/BaseDaoImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -129,8 +117,8 @@
       <file leaf-file-name="ScheduledTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/config/ScheduledTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="36" />
+            <state relative-caret-position="247">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#676#677#0" expanded="true" />
@@ -143,8 +131,8 @@
       <file leaf-file-name="DynamicScheduleTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/config/DynamicScheduleTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+            <state relative-caret-position="127">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,10 +143,33 @@
       <file leaf-file-name="MultiThreadScheduleTask.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/config/MultiThreadScheduleTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="59">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="36" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/entity/FileInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/src/main/java/com/cloud/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="515">
+              <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="e#1096#1097#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1930,7 +1941,7 @@
       <workItem from="1566125097155" duration="1136000" />
       <workItem from="1566177434922" duration="4400000" />
       <workItem from="1566201635726" duration="876000" />
-      <workItem from="1566225343019" duration="2630000" />
+      <workItem from="1566225343019" duration="3869000" />
     </task>
     <task id="LOCAL-00001" summary=" spring boot发送邮件功能">
       <created>1564896783143</created>
@@ -1974,7 +1985,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566113032580</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="spring boot mongodb 创建定时任务">
+      <created>1566229158839</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566229158839</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2010,10 +2028,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124076000" />
+    <option name="totallyTimeSpent" value="125315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38327906" sideWeight="0.5053305" order="7" side_tool="true" content_ui="tabs" />
@@ -2024,7 +2043,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22776572" sideWeight="0.4946695" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5065076" sideWeight="0.4946695" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19197397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2035,7 +2054,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12269273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15618221" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3615635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23987207" sideWeight="0.49496403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23987207" sideWeight="0.49496403" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16151386" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2087,7 +2106,8 @@
     <MESSAGE value="spring boot mongodb上传、下载、删除附件" />
     <MESSAGE value="spring boot mongodb上传、下载、删除附件（没传controller哈哈哈）" />
     <MESSAGE value="spring boot mongodb 使用gradle 管理实体版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring boot mongodb 使用gradle 管理实体版本" />
+    <MESSAGE value="spring boot mongodb 创建定时任务" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring boot mongodb 创建定时任务" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2387,25 +2407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/src/main/java/com/cloud/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#1096#1097#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/entity/FileInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="23" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/entity/ScheduleTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -2462,10 +2463,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.7.RELEASE/137e0820eaa164c5413c79700bb289f9c83d4d81/spring-context-4.3.7.RELEASE-sources.jar!/org/springframework/scheduling/annotation/Async.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/entity/FileInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/src/main/java/com/cloud/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/config/ScheduledTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="247">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
@@ -2476,26 +2504,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/config/DynamicScheduleTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+        <state relative-caret-position="127">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.7.RELEASE/137e0820eaa164c5413c79700bb289f9c83d4d81/spring-context-4.3.7.RELEASE-sources.jar!/org/springframework/scheduling/annotation/Async.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/cloud/config/MultiThreadScheduleTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="59">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="36" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
