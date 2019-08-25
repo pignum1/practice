@@ -24,13 +24,13 @@ public class DynamicScheduleTask implements SchedulingConfigurer {
 
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
-        taskRegistrar.addTriggerTask(
-                //1.添加任务内容(Runnable)
-                () -> System.out.println("执行动态定时任务: " + LocalDateTime.now().toLocalTime()),
-                //2.设置执行周期(Trigger)
-                triggerContext -> {
-                    return new CronTrigger("0/5 * * * * ?").nextExecutionTime(triggerContext);
-                }
-        );
+//        taskRegistrar.addTriggerTask(
+//                //1.添加任务内容(Runnable)
+//                () -> System.out.println("执行动态定时任务: " + LocalDateTime.now().toLocalTime()),
+//                //2.设置执行周期(Trigger)
+//                triggerContext -> {
+//                    return new CronTrigger("0/5 * * * * ?").nextExecutionTime(triggerContext);
+//                }
+//        );
     }
 }

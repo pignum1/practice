@@ -45,7 +45,7 @@ public class UserService  {
     }
 
     public OperateResult  test1(HttpServletRequest request){
-        Pageable pageable =   new PageRequest(Integer.parseInt( request.getParameter( "page" ) )-1,Integer.parseInt( request.getParameter( "size" ) ));
+        Pageable pageable =   PageRequest.of(Integer.parseInt( request.getParameter( "page" ) )-1,Integer.parseInt( request.getParameter( "size" ) ));
         List<String> filter = new ArrayList<>();
         filter.add( "materialCode" );
         filter.add( "materialDesc" );

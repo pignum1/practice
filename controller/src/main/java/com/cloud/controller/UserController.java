@@ -1,6 +1,7 @@
 package com.cloud.controller;
 
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import com.cloud.entity.Sender;
 import com.cloud.common.OperateResult;
 import com.cloud.entity.User;
 import com.cloud.exception.MyException;
@@ -29,6 +30,9 @@ import javax.servlet.http.HttpServletRequest;
 public class UserController {
     @Autowired(required = true)
     private UserService userService;
+
+    @Autowired
+    private Sender sender;
 
     //TODO REMOVE
     @RequestMapping("/test")
@@ -83,4 +87,10 @@ public class UserController {
             return null;
         }
     }
+
+    @PostMapping("/rabbit")
+    public void send(){
+        sender.send();
+    }
+
 }

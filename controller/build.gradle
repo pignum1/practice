@@ -51,6 +51,7 @@ dependencies {
 
 ext {
     set('springCloudVersion', "Dalston.SR5")
+    mongodburl="${connectionUrl}"
 }
 dependencyManagement {
     imports {
