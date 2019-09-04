@@ -31,12 +31,12 @@ public class UserService  {
 
     public OperateResult  test(){
         try {
-            User user = userDao.getOne( "402881826c12fe46016c12fe6bad0000" );
-            user.setId( null );
-            User user1 = new User();
-            BeanUtils.copyProperties( user,user1 );
-            user1.setId( null );
-            userDao.save( user1 );
+//            User user = userDao.getOne( "402881826c12fe46016c12fe6bad0000" );
+//            user.setId( null );
+//            User user1 = new User();
+//            BeanUtils.copyProperties( user,user1 );
+//            user1.setId( null );
+//            userDao.save( user1 );
             return OperateResult.operationSuccess( "" );
         }catch (Exception e){
             e.printStackTrace();

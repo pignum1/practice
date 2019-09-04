@@ -1,7 +1,7 @@
 package com.cloud.controller;
 
 import cn.afterturn.easypoi.excel.entity.ImportParams;
-import com.cloud.entity.Sender;
+import com.cloud.rabbit.sample.Sender;
 import com.cloud.common.OperateResult;
 import com.cloud.entity.User;
 import com.cloud.exception.MyException;
@@ -63,7 +63,7 @@ public class UserController {
         User user = new User();
         user.setUsername("hlhdidi");
         user.setPassword("123");
-        user.setId(id.toString());
+//        user.setId(id.toString());
         return user;
     }
 

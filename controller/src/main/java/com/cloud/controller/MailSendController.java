@@ -129,7 +129,7 @@ public class MailSendController {
             helper.setTo( "xxxxx@qq.com" );
             helper.setSubject( "主题：嵌入静态资源邮件" );
             helper.setText( "嵌入静态资源邮件邮件内容" );
-            helper.setText("<html><body><img src=\"cid:test\" ></body></html>", true);
+//            helper.setText("<html><body><img src=\"cid:test\" ></body></html>", true);
 
             FileSystemResource file = new FileSystemResource(new File(Thread.currentThread().getContextClassLoader().getResource("test.jpg").getFile()));
             helper.addInline("test", file);

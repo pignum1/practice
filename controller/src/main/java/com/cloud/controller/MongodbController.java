@@ -48,11 +48,11 @@ public class MongodbController {
         user.setQuestion("test");
         user.setAnswer("test");
         user.setRole(0);
-        user.setId("test");
-        user.setCreateTime(new Date());
-        user.setCreateBy(0L);
-        user.setLastModifiedTime(new Date());
-        user.setLastModifiedBy("test");
+//        user.setId("test");
+//        user.setCreateTime(new Date());
+//        user.setCreateBy(0L);
+//        user.setLastModifiedTime(new Date());
+//        user.setLastModifiedBy("test");
 
         mongotemplate.save( user );
         return OperateResult.operationSuccess( "save1" );

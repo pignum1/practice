@@ -28,37 +28,93 @@ public class BaseEntity implements Serializable {
     @GeneratedValue(generator="idGenerator")
     @Column(length = 32)
     private String id;
-    /**
-     * 创建时间
-     */
-    @Column(name = "create_time")
+    @Column(
+            name = "created_by_id",
+            length = 50
+    )
+    private String createdById;
+    @Column(
+            name = "created_by_user",
+            length = 50
+    )
+    private String createdByUser;
+    @Column(
+            name = "modified_by_id",
+            length = 50
+    )
+    private String modifiedById;
+    @Column(
+            name = "modified_by_user",
+            length = 50
+    )
+    private String modifiedByUser;
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(
+            name = "created_date",
+            updatable = false
+    )
     @CreatedDate
+    @JsonFormat(
+            pattern = "yyyy-MM-dd HH:mm:ss"
+    )
+    @DateTimeFormat(
+            pattern = "yyyy-MM-dd HH:mm:ss"
+    )
+    private Date createdDate;
     @Temporal(TemporalType.TIMESTAMP)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date createTime;
-    /**
-     * 创建人
-     */
-    @Column(name = "create_by")
-    @CreatedBy
-    private Long createBy;
-    /**
-     * 修改时间
-     */
+    @Column(
+            name = "modified_date"
+    )
     @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Column(name = "last_modified_time")
-    private Date lastModifiedTime;
-    /**
-     * 修改人
-     */
-    @Column(name = "last_modified_by")
-    @LastModifiedBy
-    private String lastModifiedBy;
+    @JsonFormat(
+            pattern = "yyyy-MM-dd HH:mm:ss"
+    )
+    @DateTimeFormat(
+            pattern = "yyyy-MM-dd HH:mm:ss"
+    )
+    private Date modifiedDate;
+    @Column
+    private Boolean deleteFlag = false;
 
+    public String getCreatedById() {
+        return createdById;
+    }
+
+    public void setCreatedById(String createdById) {
+        this.createdById = createdById;
+    }
+
+    public String getCreatedByUser() {
+        return createdByUser;
+    }
+
+    public void setCreatedByUser(String createdByUser) {
+        this.createdByUser = createdByUser;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
+    public Boolean getDeleteFlag() {
+        return deleteFlag;
+    }
+
+    public void setDeleteFlag(Boolean deleteFlag) {
+        this.deleteFlag = deleteFlag;
+    }
 
     public String getId() {
         return id;
@@ -68,35 +124,19 @@ public class BaseEntity implements Serializable {
         this.id = id;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public String getModifiedById() {
+        return modifiedById;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setModifiedById(String modifiedById) {
+        this.modifiedById = modifiedById;
     }
 
-    public Long getCreateBy() {
-        return createBy;
+    public String getModifiedByUser() {
+        return modifiedByUser;
     }
 
-    public void setCreateBy(Long createBy) {
-        this.createBy = createBy;
-    }
-
-    public Date getLastModifiedTime() {
-        return lastModifiedTime;
-    }
-
-    public void setLastModifiedTime(Date lastModifiedTime) {
-        this.lastModifiedTime = lastModifiedTime;
-    }
-
-    public String getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public void setLastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
+    public void setModifiedByUser(String modifiedByUser) {
+        this.modifiedByUser = modifiedByUser;
     }
 }
