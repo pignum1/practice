@@ -2,7 +2,9 @@ package test;
 
 import com.alibaba.fastjson.JSON;
 import com.cloud.Application;
+import com.cloud.dao.UserDao;
 import com.cloud.entity.User;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
 
 /**
  * @author WXY
@@ -28,16 +32,15 @@ public class PriceTest {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    @Autowired
+    private UserDao userDao;
+
 
     @Test
     public void testSave(){
 // 保存对象
-        User user = new User();
-        user.setUsername("uhu");
-        user.setPassword("13424");
-        redisTemplate.opsForValue().set(user.getUsername(), user);
-        Object object = redisTemplate.opsForValue().get( "1" );
-        System.out.println(object.toString());
+        List<User> users = userDao.findAll() ;
+        System.out.println(users.size());
 
     }
 
